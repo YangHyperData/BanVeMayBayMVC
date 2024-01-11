@@ -182,6 +182,7 @@
     <Compile Include="Areas\Admin\Controllers\AdvController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ImportProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
     <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
@@ -191,6 +192,7 @@
     <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
     <Compile Include="Areas\Admin\Controllers\SettingSystemController.cs" />
     <Compile Include="Areas\Admin\Controllers\StatisticalController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Type_ClassProductController.cs" />
     <Compile Include="Common\Common.cs" />
     <Compile Include="Common\SettingHelper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -205,9 +207,33 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202312290618314_DBN.cs" />
-    <Compile Include="Migrations\202312290618314_DBN.designer.cs">
-      <DependentUpon>202312290618314_DBN.cs</DependentUpon>
+    <Compile Include="Migrations\202401070914069_DBN.cs" />
+    <Compile Include="Migrations\202401070914069_DBN.designer.cs">
+      <DependentUpon>202401070914069_DBN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202401111210569_Add_IP_IPD.cs" />
+    <Compile Include="Migrations\202401111210569_Add_IP_IPD.designer.cs">
+      <DependentUpon>202401111210569_Add_IP_IPD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202401111248403_Update_IPD.cs" />
+    <Compile Include="Migrations\202401111248403_Update_IPD.designer.cs">
+      <DependentUpon>202401111248403_Update_IPD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202401111305493_Update_P.cs" />
+    <Compile Include="Migrations\202401111305493_Update_P.designer.cs">
+      <DependentUpon>202401111305493_Update_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202401111339513_Add_TCP_Update_P.cs" />
+    <Compile Include="Migrations\202401111339513_Add_TCP_Update_P.designer.cs">
+      <DependentUpon>202401111339513_Add_TCP_Update_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202401111346484_Update_TCP.cs" />
+    <Compile Include="Migrations\202401111346484_Update_TCP.designer.cs">
+      <DependentUpon>202401111346484_Update_TCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202401111351110_Update_TCP_1.cs" />
+    <Compile Include="Migrations\202401111351110_Update_TCP_1.designer.cs">
+      <DependentUpon>202401111351110_Update_TCP_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -218,6 +244,8 @@
     <Compile Include="Models\EF\Adv.cs" />
     <Compile Include="Models\EF\Category.cs" />
     <Compile Include="Models\EF\Contact.cs" />
+    <Compile Include="Models\EF\ImportProduct.cs" />
+    <Compile Include="Models\EF\ImportProductDetail.cs" />
     <Compile Include="Models\EF\News.cs" />
     <Compile Include="Models\EF\Order.cs" />
     <Compile Include="Models\EF\OrderDetail.cs" />
@@ -228,6 +256,7 @@
     <Compile Include="Models\EF\Subscribe.cs" />
     <Compile Include="Models\EF\SystemSetting.cs" />
     <Compile Include="Models\EF\ThongKe.cs" />
+    <Compile Include="Models\EF\Type_ClassProduct.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OrderViewModel.cs" />
@@ -3847,6 +3876,9 @@
     <Content Include="Asset\vendor\slick\slick-theme.scss" />
     <Content Include="Asset\vendor\slick\slick.less" />
     <Content Include="Asset\vendor\slick\slick.scss" />
+    <Content Include="Areas\Admin\Views\ImportProduct\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ImportProduct\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Type_ClassProduct\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <None Include="Scripts\jquery-3.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
@@ -3864,7 +3896,63 @@
     <Content Include="Scripts\jsShopping.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Uploads\images\244994762_2380031152133544_4984166604951804110_n.jpg" />
+    <Content Include="Uploads\images\sanpham\banner_1.jpg" />
+    <Content Include="Uploads\images\sanpham\banner_2.jpg" />
+    <Content Include="Uploads\images\sanpham\banner_3.jpg" />
+    <Content Include="Uploads\images\sanpham\blog_1.jpg" />
+    <Content Include="Uploads\images\sanpham\blog_2.jpg" />
+    <Content Include="Uploads\images\sanpham\blog_3.jpg" />
+    <Content Include="Uploads\images\sanpham\deal_ofthe_week.png" />
+    <Content Include="Uploads\images\sanpham\desc_1.jpg" />
+    <Content Include="Uploads\images\sanpham\desc_2.jpg" />
+    <Content Include="Uploads\images\sanpham\desc_3.jpg" />
+    <Content Include="Uploads\images\sanpham\map_marker.png" />
+    <Content Include="Uploads\images\sanpham\product_1.png" />
+    <Content Include="Uploads\images\sanpham\product_10.png" />
+    <Content Include="Uploads\images\sanpham\product_2.png" />
+    <Content Include="Uploads\images\sanpham\product_3.png" />
+    <Content Include="Uploads\images\sanpham\product_4.png" />
+    <Content Include="Uploads\images\sanpham\product_5.png" />
+    <Content Include="Uploads\images\sanpham\product_6.png" />
+    <Content Include="Uploads\images\sanpham\product_7.png" />
+    <Content Include="Uploads\images\sanpham\product_8.png" />
+    <Content Include="Uploads\images\sanpham\product_9.png" />
+    <Content Include="Uploads\images\sanpham\single_1.jpg" />
+    <Content Include="Uploads\images\sanpham\single_1_thumb.jpg" />
+    <Content Include="Uploads\images\sanpham\single_2.jpg" />
+    <Content Include="Uploads\images\sanpham\single_2_thumb.jpg" />
+    <Content Include="Uploads\images\sanpham\single_3.jpg" />
+    <Content Include="Uploads\images\sanpham\single_3_thumb.jpg" />
+    <Content Include="Uploads\images\sanpham\slider_1.jpg" />
     <Content Include="Uploads\_thumbs\Images\244994762_2380031152133544_4984166604951804110_n.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\banner_1.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\banner_2.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\banner_3.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\blog_1.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\blog_2.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\blog_3.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\deal_ofthe_week.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\desc_1.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\desc_2.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\desc_3.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\map_marker.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_1.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_10.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_2.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_3.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_4.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_5.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_6.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_7.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_8.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\product_9.png" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\single_1.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\single_1_thumb.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\single_2.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\single_2_thumb.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\single_3.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\single_3_thumb.jpg" />
+    <Content Include="Uploads\_thumbs\Images\sanpham\slider_1.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -3938,8 +4026,26 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312290618314_DBN.resx">
-      <DependentUpon>202312290618314_DBN.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401070914069_DBN.resx">
+      <DependentUpon>202401070914069_DBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401111210569_Add_IP_IPD.resx">
+      <DependentUpon>202401111210569_Add_IP_IPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401111248403_Update_IPD.resx">
+      <DependentUpon>202401111248403_Update_IPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401111305493_Update_P.resx">
+      <DependentUpon>202401111305493_Update_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401111339513_Add_TCP_Update_P.resx">
+      <DependentUpon>202401111339513_Add_TCP_Update_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401111346484_Update_TCP.resx">
+      <DependentUpon>202401111346484_Update_TCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401111351110_Update_TCP_1.resx">
+      <DependentUpon>202401111351110_Update_TCP_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

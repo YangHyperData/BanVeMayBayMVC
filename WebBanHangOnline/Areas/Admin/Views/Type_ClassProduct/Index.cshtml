@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebBanHangOnline.Models.EF.Type_ClassProduct>
+@{
+    ViewBag.Title = "Kích Cỡ Sản Phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutEmpty.cshtml";
+}
+<style>
+    .glImage {
+        list-style: none;
+        margin-top: 0;
+        padding: 0;
+        display: flex;
+    }
+
+        .glImage li {
+            display: inline-block;
+            position: relative;
+        }
+
+    .box-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+<section class="content">
+
+    <!-- Default box -->
+    <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead style="background-color:aquamarine;">
+                    <tr class="text-center">
+                        <th>STT</th>
+                        <th>Color</th>
+                        <th>Size</th>
+                        <th>Số Lượng</th>
+                        @*<th></th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        var s = 0;
+                        var i = 1;
+                        foreach (var item in Model)
+                        {
+                            <tr class="text-center">
+                                <td>@i</td>
+                                <td>@item.TypeTicket</td>
+                                <td>@item.ClassTicket</td>
+                                <td>@item.Quantity</td>
+                            </tr>
+                            i++;
+                            s += item.Quantity;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">Không có bản ghi nào!</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+
+        </div>
+        <!-- /.card-footer-->
+    </div>
+    <!-- /.card -->
+</section>
