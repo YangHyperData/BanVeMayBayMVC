@@ -208,33 +208,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202401111210569_Add_IP_IPD.cs" />
-    <Compile Include="Migrations\202401111210569_Add_IP_IPD.designer.cs">
-      <DependentUpon>202401111210569_Add_IP_IPD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401111248403_Update_IPD.cs" />
-    <Compile Include="Migrations\202401111248403_Update_IPD.designer.cs">
-      <DependentUpon>202401111248403_Update_IPD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401111305493_Update_P.cs" />
-    <Compile Include="Migrations\202401111305493_Update_P.designer.cs">
-      <DependentUpon>202401111305493_Update_P.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401111339513_Add_TCP_Update_P.cs" />
-    <Compile Include="Migrations\202401111339513_Add_TCP_Update_P.designer.cs">
-      <DependentUpon>202401111339513_Add_TCP_Update_P.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401111346484_Update_TCP.cs" />
-    <Compile Include="Migrations\202401111346484_Update_TCP.designer.cs">
-      <DependentUpon>202401111346484_Update_TCP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401111351110_Update_TCP_1.cs" />
-    <Compile Include="Migrations\202401111351110_Update_TCP_1.designer.cs">
-      <DependentUpon>202401111351110_Update_TCP_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401120818316_Add_TP_TPD_1.cs" />
-    <Compile Include="Migrations\202401120818316_Add_TP_TPD_1.designer.cs">
-      <DependentUpon>202401120818316_Add_TP_TPD_1.cs</DependentUpon>
+    <Compile Include="Migrations\202401120858330_Add_DB.cs" />
+    <Compile Include="Migrations\202401120858330_Add_DB.designer.cs">
+      <DependentUpon>202401120858330_Add_DB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -4033,26 +4009,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202401111210569_Add_IP_IPD.resx">
-      <DependentUpon>202401111210569_Add_IP_IPD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401111248403_Update_IPD.resx">
-      <DependentUpon>202401111248403_Update_IPD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401111305493_Update_P.resx">
-      <DependentUpon>202401111305493_Update_P.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401111339513_Add_TCP_Update_P.resx">
-      <DependentUpon>202401111339513_Add_TCP_Update_P.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401111346484_Update_TCP.resx">
-      <DependentUpon>202401111346484_Update_TCP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401111351110_Update_TCP_1.resx">
-      <DependentUpon>202401111351110_Update_TCP_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401120818316_Add_TP_TPD_1.resx">
-      <DependentUpon>202401120818316_Add_TP_TPD_1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401120858330_Add_DB.resx">
+      <DependentUpon>202401120858330_Add_DB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

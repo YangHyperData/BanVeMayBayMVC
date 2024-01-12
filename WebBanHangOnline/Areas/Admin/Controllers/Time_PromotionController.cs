@@ -120,5 +120,63 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             }
             return Json(new { success = false });
         }
+
+        [HttpGet]
+        public ActionResult ApplyPromotion()
+        {
+            var tp = db.Time_Promotions.ToList();
+            var dtn = DateTime.Now;
+            foreach (var item in tp)
+            {
+                if (dtn >= item.StartDate && dtn <= item.EndDate)
+                {
+                    item.IsActive = true;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    item.IsActive = false;
+                    db.SaveChanges();
+                    var tpd = db.Time_Promotion_Details.Where(x => x.TimePromotionId == item.Id).ToList();
+                    if (tpd != null)
+                    {
+                        foreach (var t in tpd)
+                        {
+                            var p = db.Products.FirstOrDefault(x => x.Id == t.ProductId);
+                            if (p != null)
+                            {
+                                p.PriceSale = decimal.Zero;
+                                p.IsSale = false;
+                                db.SaveChanges();
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            tp = db.Time_Promotions.Where(x => x.IsActive == true).ToList();
+            if (tp != null)
+            {
+                foreach (var item in tp)
+                {
+                    var tpd = db.Time_Promotion_Details.Where(x => x.TimePromotionId == item.Id).ToList();
+                    if (tpd != null)
+                    {
+                        foreach (var t in tpd)
+                        {
+                            var p = db.Products.FirstOrDefault(x => x.Id == t.ProductId);
+                            if (p != null)
+                            {
+                                p.PriceSale = p.Price * (1 - item.PercentValue / 100);
+                                p.IsSale = true;
+                                db.SaveChanges();
+                            }
+                        }
+                    }
+                }
+            }
+            return Json(new { success = true });
+        }
     }
 }
