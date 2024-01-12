@@ -138,5 +138,11 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             }
             return RedirectToAction("Index", "Products");
         }
+
+        public ActionResult Detail(int id)
+        {
+            var item = db.ImportProducts.FirstOrDefault(x => x.Id == id);
+            return View(item);
+        }
     }
 }

@@ -44,6 +44,9 @@ namespace WebBanHangOnline.Models
         public DbSet<ImportProduct> ImportProducts { get; set; }
         public DbSet<ImportProductDetail> ImportProductDetails { get; set; }
         public DbSet<Type_ClassProduct> Type_ClassProducts { get; set; }
+        public DbSet<Time_Promotion> Time_Promotions { get; set; }
+        public DbSet<Time_Promotion_Detail> Time_Promotion_Details { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

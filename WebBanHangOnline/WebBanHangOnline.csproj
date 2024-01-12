@@ -192,6 +192,7 @@
     <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
     <Compile Include="Areas\Admin\Controllers\SettingSystemController.cs" />
     <Compile Include="Areas\Admin\Controllers\StatisticalController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Time_PromotionController.cs" />
     <Compile Include="Areas\Admin\Controllers\Type_ClassProductController.cs" />
     <Compile Include="Common\Common.cs" />
     <Compile Include="Common\SettingHelper.cs" />
@@ -206,10 +207,6 @@
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401070914069_DBN.cs" />
-    <Compile Include="Migrations\202401070914069_DBN.designer.cs">
-      <DependentUpon>202401070914069_DBN.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202401111210569_Add_IP_IPD.cs" />
     <Compile Include="Migrations\202401111210569_Add_IP_IPD.designer.cs">
@@ -235,6 +232,10 @@
     <Compile Include="Migrations\202401111351110_Update_TCP_1.designer.cs">
       <DependentUpon>202401111351110_Update_TCP_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202401120818316_Add_TP_TPD_1.cs" />
+    <Compile Include="Migrations\202401120818316_Add_TP_TPD_1.designer.cs">
+      <DependentUpon>202401120818316_Add_TP_TPD_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -256,6 +257,8 @@
     <Compile Include="Models\EF\Subscribe.cs" />
     <Compile Include="Models\EF\SystemSetting.cs" />
     <Compile Include="Models\EF\ThongKe.cs" />
+    <Compile Include="Models\EF\Time_Promotion.cs" />
+    <Compile Include="Models\EF\Time_Promotion_Detail.cs" />
     <Compile Include="Models\EF\Type_ClassProduct.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -3879,6 +3882,10 @@
     <Content Include="Areas\Admin\Views\ImportProduct\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ImportProduct\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Type_ClassProduct\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ImportProduct\Detail.cshtml" />
+    <Content Include="Areas\Admin\Views\Time_Promotion\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Time_Promotion\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Time_Promotion\Detail.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <None Include="Scripts\jquery-3.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
@@ -4026,9 +4033,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202401070914069_DBN.resx">
-      <DependentUpon>202401070914069_DBN.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202401111210569_Add_IP_IPD.resx">
       <DependentUpon>202401111210569_Add_IP_IPD.cs</DependentUpon>
     </EmbeddedResource>
@@ -4046,6 +4050,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202401111351110_Update_TCP_1.resx">
       <DependentUpon>202401111351110_Update_TCP_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401120818316_Add_TP_TPD_1.resx">
+      <DependentUpon>202401120818316_Add_TP_TPD_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

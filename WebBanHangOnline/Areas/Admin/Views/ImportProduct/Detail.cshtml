@@ -1,0 +1,68 @@
+﻿@model WebBanHangOnline.Models.EF.ImportProduct
+@{
+    ViewBag.Title = "Xem Chi Tiết Phiếu Nhập";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/assets/styles/CreateExam.css" />
+@section naviheader {
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/admin" class="nav-link">Trang Chủ</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/admin/category" class="nav-link">@ViewBag.Title</a>
+        </li>
+    </ul>
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Quản Lý Xuất Hàng</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<div class="page-wrapper">
+    <div class="container-fluid">
+        @*Xây dựng nội dung ở đây*@
+
+        <div class="ContainerCreateExam">
+            <form action="/admin/ImportProduct/add" method="post">
+                <div class="form-horizontal">
+                    <h4>Xem Chi Tiết Phiếu Nhập Hàng</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Tên Đợt Nhập Hàng</label>
+                        <div class="col-md-10">
+                            <input type="text" name="TenDotNhapHang" class="NameKyThi form-control" readonly value="@Model.Title" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Ghi Chú</label>
+                        <div class="col-md-10">
+                            <textarea type="text" name="GhiChu" class="NameKyThi form-control" readonly value="@Model.Note"></textarea>
+                        </div>
+                    </div>
+
+                    @*Thông tin phiếu nhập*@
+                    <table class="table table-bordered table-hover">
+                        <thead style="background-color:aquamarine">
+                            <tr class="text-center">
+                                <th>Mã Sản Phẩm</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Giá Nhập</th>
+                                <th>Loại Vé</th>
