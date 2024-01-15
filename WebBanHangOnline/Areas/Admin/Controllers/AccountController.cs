@@ -56,8 +56,8 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
         // GET: Admin/Account
         public ActionResult Index()
         {
-            var ítems = db.Users.ToList();
-            return View(ítems);
+            var items = db.Users.ToList();
+            return View(items);
         }
         //
         // GET: /Account/Login
@@ -229,6 +229,38 @@ namespace WebBanHangOnline.Areas.Admin.Controllers
             ViewBag.Role = new SelectList(db.Roles.ToList(), "Name", "Name");
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        public async Task<ActionResult> IsActive(string id)
+        {
+            var item = UserManager.FindById(id);
+            if (item != null)
+            {
+                if (item.IsActive == true)
+                {
+                    item.IsActive = false;
+                    string contentCustomer = System.IO.File.ReadAllText(Server.MapPath("~/Content/templates/send_BanAcc.html"));
+                    contentCustomer = contentCustomer.Replace("{{TenKhachHang}}", item.FullName);
+                    contentCustomer = contentCustomer.Replace("{{DiaChiMailAdmin}}", "nguyenquocdung26032003@gmail.com");
+                    WebBanHangOnline.Common.Common.SendMail("ABC Store", "THÔNG BÁO KHÓA TÀI KHOẢN TẠI ABC STORE", contentCustomer.ToString(), item.Email);
+                }
+                else
+                {
+                    item.IsActive = true;
+                    string contentCustomer = System.IO.File.ReadAllText(Server.MapPath("~/Content/templates/send_BanAcc.html"));
+                    contentCustomer = contentCustomer.Replace("{{TenKhachHang}}", item.FullName);
+                    contentCustomer = contentCustomer.Replace("{{DiaChiMailAdmin}}", "nguyenquocdung26032003@gmail.com");
+                    contentCustomer = contentCustomer.Replace("{{SoDienThoaiAdmin}}", "0901291640");
+                    WebBanHangOnline.Common.Common.SendMail("ABC Store", "THÔNG BÁO MỞ KHÓA TÀI KHOẢN TẠI ABC STORE", contentCustomer.ToString(), item.Email);
+                }
+                /*db.Entry(item).State = System.Data.Entity.EntityState.Modified;*/
+                var result = await UserManager.UpdateAsync(item);
+                if (result.Succeeded)
+                {
+                    return Json(new { success = true, isActive = item.IsActive });
+                }
+            }
+            return Json(new { success = false });
         }
 
         [HttpPost]

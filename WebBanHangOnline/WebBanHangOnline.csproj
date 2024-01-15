@@ -211,6 +211,10 @@
     <Compile Include="Migrations\202401120858330_Add_DB.designer.cs">
       <DependentUpon>202401120858330_Add_DB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202401151410079_Update_Account.cs" />
+    <Compile Include="Migrations\202401151410079_Update_Account.designer.cs">
+      <DependentUpon>202401151410079_Update_Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -3542,6 +3546,8 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\templates\send1.html" />
     <Content Include="Content\templates\send2.html" />
+    <Content Include="Content\templates\send_BanAcc.html" />
+    <Content Include="Content\templates\send_UnbanAcc.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -4010,6 +4016,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202401120858330_Add_DB.resx">
       <DependentUpon>202401120858330_Add_DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401151410079_Update_Account.resx">
+      <DependentUpon>202401151410079_Update_Account.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

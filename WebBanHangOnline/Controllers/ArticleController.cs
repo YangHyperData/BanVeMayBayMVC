@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebBanHangOnline.Models;
+using WebBanHangOnline.Models.EF;
 
 namespace WebBanHangOnline.Controllers
 {
@@ -16,5 +19,6 @@ namespace WebBanHangOnline.Controllers
             var item = db.Posts.FirstOrDefault(x => x.Alias == alias);
             return View(item);
         }
+
     }
 }

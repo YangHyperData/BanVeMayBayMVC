@@ -13,13 +13,24 @@
         {
             item.Alias = item.Link;
         }
-        <li><a href="/@item.Alias">@item.Title</a></li>
+        if (item.Alias.Equals("gioi-thieu"))
+        {
+            <li><a href="/post/gioi-thieu">@item.Title</a></li>
+        }
+        else if (item.Alias.Equals("khuyen-mai"))
+        {
+            <li><a href="/post/khuyen-mai">@item.Title</a></li>
+        }
+        else
+        {
+            <li><a href="/@item.Alias">@item.Title</a></li>
+        }
     }
 
     @*<li><a href="#">shop</a></li>
-    <li><a href="#">promotion</a></li>
-    <li><a href="#">pages</a></li>
-    <li><a href="#">blog</a></li>
-    <li><a href="contact.html">contact</a></li>*@
+        <li><a href="#">promotion</a></li>
+        <li><a href="#">pages</a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="contact.html">contact</a></li>*@
 </ul>
 }
