@@ -127,7 +127,7 @@
                                 <a href='#' data-id="@item.Id" class="btnFeature">@Html.Raw(strCheckFeature)</a>
                             </td>
                             <td class="text-center">    
-                                <a href='#' data-id="@item.Id" class="btnActive">@Html.Raw(strCheckFeature)</a>
+                                <a href='#' data-id="@item.Id" class="btnActive">@Html.Raw(strCheck)</a>
                             </td>
                             <td>
                                 <a href="/admin/Products/edit/@item.Id" class="btn btn-sm btn-primary">Sửa</a>
@@ -296,6 +296,7 @@
                             } else {
                                 btn.html("<i class='fas fa-times text-danger'></i>");
                             }
+                            window.location.reload();
                         }
 
                     }
@@ -318,6 +319,7 @@
                             else {
                                 btn.html("<i class='fas fa-times text-danger'></i>")
                             }
+                            window.location.reload();
                         }
                     }
                 });
@@ -339,6 +341,7 @@
                             else {
                                 btn.html("<i class='fas fa-times text-danger'></i>")
                             }
+                            window.location.reload();
                         }
                     }
                 });
@@ -361,6 +364,7 @@
                             } else {
                                 btn.html("<i class='fas fa-times text-danger'></i>");
                             }
+                            window.location.reload();
                         }
 
                     }
@@ -379,11 +383,10 @@
                         if (rs.success) {
                             if (rs.isAcive) {
                                 btn.html("<i class='fa fa-check text-success'></i>");
-                                //$(this).find("i").removeClass("fas fa-times text-danger")
-                                //$(this).find("i").addClass("fa fa-check text-success");
                             } else {
                                 btn.html("<i class='fas fa-times text-danger'></i>");
                             }
+                            window.location.reload();
                         }
 
                     }

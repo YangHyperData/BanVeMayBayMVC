@@ -207,13 +207,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202401120858330_Add_DB.cs" />
-    <Compile Include="Migrations\202401120858330_Add_DB.designer.cs">
-      <DependentUpon>202401120858330_Add_DB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202401151410079_Update_Account.cs" />
-    <Compile Include="Migrations\202401151410079_Update_Account.designer.cs">
-      <DependentUpon>202401151410079_Update_Account.cs</DependentUpon>
+    <Compile Include="Migrations\202401160411351_abcde.cs" />
+    <Compile Include="Migrations\202401160411351_abcde.designer.cs">
+      <DependentUpon>202401160411351_abcde.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -265,8 +261,6 @@
     <Content Include="Asset\fonts\Montserrat\OFL.txt" />
     <Content Include="Asset\fonts\PlayfairDisplay\OFL.txt" />
     <Content Include="Asset\Images\100X125.gif" />
-    <Content Include="Asset\Images\130318.jpg" />
-    <Content Include="Asset\Images\130499.jpg" />
     <Content Include="Asset\Images\A00915C_P1-650x650.jpg" />
     <Content Include="Asset\Images\about-01.jpg" />
     <Content Include="Asset\Images\about-02.jpg" />
@@ -332,23 +326,7 @@
     <Content Include="Asset\Images\item-cart-03.jpg" />
     <Content Include="Asset\Images\item-cart-04.jpg" />
     <Content Include="Asset\Images\item-cart-05.jpg" />
-    <Content Include="Asset\Images\Kt.jpg" />
-    <Content Include="Asset\Images\KT0001.jpg" />
-    <Content Include="Asset\Images\KT0002.jpg" />
-    <Content Include="Asset\Images\KT0003.jpg" />
-    <Content Include="Asset\Images\KT0004.jpg" />
-    <Content Include="Asset\Images\KT0005.jpg" />
-    <Content Include="Asset\Images\KT0006.jpg" />
-    <Content Include="Asset\Images\KT0007.jpg" />
-    <Content Include="Asset\Images\KT0008.jpg" />
-    <Content Include="Asset\Images\KT0009.jpg" />
-    <Content Include="Asset\Images\LTWeb2005.jpg" />
-    <Content Include="Asset\Images\Me.jpg" />
-    <Content Include="Asset\Images\mvc.jpg" />
     <Content Include="Asset\Images\nike-air-vapormax-2021-fk-dc9394-001-1.jpg" />
-    <Content Include="Asset\Images\Oracle.jpg" />
-    <Content Include="Asset\Images\Oracle.png" />
-    <Content Include="Asset\Images\P0001.jpg" />
     <Content Include="Asset\Images\product-01.jpg" />
     <Content Include="Asset\Images\product-02.jpg" />
     <Content Include="Asset\Images\product-03.jpg" />
@@ -371,7 +349,6 @@
     <Content Include="Asset\Images\product-min-01.jpg" />
     <Content Include="Asset\Images\product-min-02.jpg" />
     <Content Include="Asset\Images\product-min-03.jpg" />
-    <Content Include="Asset\Images\P_0001.jpg" />
     <Content Include="Asset\Images\Save.jpg" />
     <Content Include="Asset\Images\slide-01.jpg" />
     <Content Include="Asset\Images\slide-02.jpg" />
@@ -387,21 +364,9 @@
     <Content Include="Asset\Images\Slider\05.jpg" />
     <Content Include="Asset\Images\Slider\06.jpg" />
     <Content Include="Asset\Images\Sotien.gif" />
-    <Content Include="Asset\Images\TH001.jpg" />
-    <Content Include="Asset\Images\TH002.jpg" />
-    <Content Include="Asset\Images\TH003.jpg" />
-    <Content Include="Asset\Images\TH004.jpg" />
-    <Content Include="Asset\Images\TH005.jpg" />
-    <Content Include="Asset\Images\TH006.jpg" />
-    <Content Include="Asset\Images\TH007.jpg" />
-    <Content Include="Asset\Images\TH008.jpg" />
-    <Content Include="Asset\Images\THCB.jpg" />
-    <Content Include="Asset\Images\thu.jpg" />
-    <Content Include="Asset\Images\thu1.jpg" />
     <Content Include="Asset\Images\thumb-01.jpg" />
     <Content Include="Asset\Images\thumb-02.jpg" />
     <Content Include="Asset\Images\thumb-03.jpg" />
-    <Content Include="Asset\Images\TiengAnh01.jpg" />
     <Content Include="Asset\Images\VN0A4BVYRDB_1-1-650x650.jpg" />
     <Content Include="Asset\Images\VN0A54F2BRO_1-650x650.jpg" />
     <Content Include="Asset\Images\VN0A5FCBY28-650x650.jpg" />
@@ -3551,6 +3516,22 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\dalat1.jpg" />
+    <Content Include="Images\dalat2.jfif" />
+    <Content Include="Images\hongkong1.jpg" />
+    <Content Include="Images\hongkong2.jpeg" />
+    <Content Include="Images\newyork1.jpg" />
+    <Content Include="Images\newyork2.jpg" />
+    <Content Include="Images\newyork3.jpg" />
+    <Content Include="Images\nhatban1.jpg" />
+    <Content Include="Images\nhatban3.jpg" />
+    <Content Include="Images\singapore2.jpg" />
+    <Content Include="Images\singapore3.jpg" />
+    <Content Include="Images\sydney1.jpg" />
+    <Content Include="Images\sydney2.jpg" />
+    <Content Include="Images\thailan1.jpg" />
+    <Content Include="Images\thailan2.jpg" />
+    <Content Include="Images\thailan3.jpg" />
     <Content Include="Scripts\autoNumeric-1.9.45.js" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Content\clients\dist\css\adminlte.css.map" />
@@ -3867,6 +3848,10 @@
     <Content Include="Areas\Admin\Views\Time_Promotion\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Time_Promotion\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Time_Promotion\Detail.cshtml" />
+    <Content Include="Images\dalat3.webp" />
+    <Content Include="Images\hongkong3.webp" />
+    <Content Include="Images\nhatban2.webp" />
+    <Content Include="Images\singapore1.webp" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <None Include="Scripts\jquery-3.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
@@ -4014,11 +3999,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202401120858330_Add_DB.resx">
-      <DependentUpon>202401120858330_Add_DB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401151410079_Update_Account.resx">
-      <DependentUpon>202401151410079_Update_Account.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401160411351_abcde.resx">
+      <DependentUpon>202401160411351_abcde.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
